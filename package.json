@@ -1,7 +1,7 @@
 {
   "name": "vendito",
   "version": "1.0.0",
-  "description": "A nice greeter",
+  "description": "Storefront functionality for headless Shopify sites.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -9,16 +9,22 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.{ts,js}\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
-  "keywords": ["Vue", "Shopify", "GraphQL", "Nuxt"],
+  "keywords": [
+    "Vue",
+    "Shopify",
+    "GraphQL",
+    "Nuxt"
+  ],
   "author": "Steven Jackson",
   "license": "ISC",
   "dependencies": {
+    "@shopify/shopify-api": "^3.1.0",
     "axios": "^0.27.2"
   },
   "devDependencies": {
